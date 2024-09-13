@@ -16,3 +16,4 @@ jobs:
         with:
           approvers: venkatkumarp
           minimum-approvals: 1
+          secret: ${{ secrets.GITHUB_TOKEN }}
