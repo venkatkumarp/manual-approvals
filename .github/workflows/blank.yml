@@ -6,7 +6,9 @@ jobs:
   build-plan:
     name: Approval
     runs-on: ubuntu-latest
-        
+    permissions:
+      issues: write  # This grants the necessary permission to create issues
+
     steps:
       - name: Simulate Approval Step
         run: echo "Manual approval testing"
@@ -16,4 +18,4 @@ jobs:
         with:
           approvers: venkatkumarp
           minimum-approvals: 1
-          secret: ${{ secrets.GITHUB_TOKEN }}
+          secret: ${{ secrets.GITHUB_TOKEN }}  # Using GITHUB_TOKEN to authenticate
